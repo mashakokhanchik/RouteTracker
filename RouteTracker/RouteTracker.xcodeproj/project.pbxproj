@@ -12,7 +12,7 @@
 		763B8C803377ECB6F79C1A65 /* Pods_RouteTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40B14ABD9EA2F19D97D8A2B /* Pods_RouteTrackerTests.framework */; };
 		E147560F2730116100109D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147560E2730116100109D0C /* AppDelegate.swift */; };
 		E14756112730116100109D0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14756102730116100109D0C /* SceneDelegate.swift */; };
-		E14756132730116100109D0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14756122730116100109D0C /* ViewController.swift */; };
+		E14756132730116100109D0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14756122730116100109D0C /* MapViewController.swift */; };
 		E14756162730116100109D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14756142730116100109D0C /* Main.storyboard */; };
 		E14756182730116200109D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14756172730116200109D0C /* Assets.xcassets */; };
 		E147561B2730116200109D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14756192730116200109D0C /* LaunchScreen.storyboard */; };
@@ -51,7 +51,7 @@
 		E147560B2730116100109D0C /* RouteTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147560E2730116100109D0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E14756102730116100109D0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E14756122730116100109D0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E14756122730116100109D0C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E14756152730116100109D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E14756172730116200109D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E147561A2730116200109D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +101,73 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E1197B712735335C00B2C02A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E147560E2730116100109D0C /* AppDelegate.swift */,
+				E14756102730116100109D0C /* SceneDelegate.swift */,
+				E1197B722735336E00B2C02A /* BusinessLogic */,
+				E1197B732735339900B2C02A /* Entity */,
+				E1197B74273533AE00B2C02A /* Assembly */,
+				E1197B75273533C000B2C02A /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E1197B722735336E00B2C02A /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		E1197B732735339900B2C02A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E1197B74273533AE00B2C02A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		E1197B75273533C000B2C02A /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				E14756122730116100109D0C /* MapViewController.swift */,
+				E14756142730116100109D0C /* Main.storyboard */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		E1197B76273533E900B2C02A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E1197B772735340400B2C02A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E14756172730116200109D0C /* Assets.xcassets */,
+				E14756192730116200109D0C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1197B782735344100B2C02A /* Enviroments */ = {
+			isa = PBXGroup;
+			children = (
+				E147561C2730116200109D0C /* Info.plist */,
+			);
+			path = Enviroments;
+			sourceTree = "<group>";
+		};
 		E14756022730116100109D0C = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +193,10 @@
 		E147560D2730116100109D0C /* RouteTracker */ = {
 			isa = PBXGroup;
 			children = (
-				E147560E2730116100109D0C /* AppDelegate.swift */,
-				E14756102730116100109D0C /* SceneDelegate.swift */,
-				E14756122730116100109D0C /* ViewController.swift */,
-				E14756142730116100109D0C /* Main.storyboard */,
-				E14756172730116200109D0C /* Assets.xcassets */,
-				E14756192730116200109D0C /* LaunchScreen.storyboard */,
-				E147561C2730116200109D0C /* Info.plist */,
+				E1197B712735335C00B2C02A /* App */,
+				E1197B76273533E900B2C02A /* Core */,
+				E1197B772735340400B2C02A /* Resources */,
+				E1197B782735344100B2C02A /* Enviroments */,
 			);
 			path = RouteTracker;
 			sourceTree = "<group>";
@@ -164,7 +228,6 @@
 				D94BA6B477A947CCB170A3F0 /* Pods-RouteTrackerTests.debug.xcconfig */,
 				525B61A6A913AD1DFEF553FF /* Pods-RouteTrackerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E14756132730116100109D0C /* ViewController.swift in Sources */,
+				E14756132730116100109D0C /* MapViewController.swift in Sources */,
 				E147560F2730116100109D0C /* AppDelegate.swift in Sources */,
 				E14756112730116100109D0C /* SceneDelegate.swift in Sources */,
 			);
@@ -591,7 +654,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4PJKP44QG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RouteTracker/Info.plist;
+				INFOPLIST_FILE = RouteTracker/Enviroments/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -620,7 +684,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4PJKP44QG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RouteTracker/Info.plist;
+				INFOPLIST_FILE = RouteTracker/Enviroments/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
