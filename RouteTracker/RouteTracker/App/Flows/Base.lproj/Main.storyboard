@@ -33,40 +33,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkV-Bd-cl1" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="135" width="414" height="727"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gW-Uh-8hk">
+                                <rect key="frame" x="20" y="88" width="86.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="pif-ci-zKS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="End route"/>
+                                <connections>
+                                    <action selector="stopLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cr6-UY-b2P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z24-F1-mZY">
+                                <rect key="frame" x="297.5" y="88" width="117.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Previous route"/>
+                                <connections>
+                                    <action selector="loadLastLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aoq-bo-g24"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="66v-2Y-ymT"/>
-                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7rz-vb-ckZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LkV-Bd-cl1" secondAttribute="bottom" id="hMg-zZ-3zM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LkV-Bd-cl1" secondAttribute="trailing" id="q10-jq-7Lv"/>
+                            <constraint firstItem="9gW-Uh-8hk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5eW-bW-LSM"/>
+                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8cf-61-Pd7"/>
+                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="top" secondItem="z24-F1-mZY" secondAttribute="bottom" constant="16" id="97c-6k-FDE"/>
+                            <constraint firstAttribute="trailing" secondItem="z24-F1-mZY" secondAttribute="trailing" constant="-1" id="Jga-EF-PIa"/>
+                            <constraint firstItem="z24-F1-mZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9gW-Uh-8hk" secondAttribute="trailing" constant="6" id="MMG-0Q-jFc"/>
+                            <constraint firstItem="z24-F1-mZY" firstAttribute="trailing" secondItem="LkV-Bd-cl1" secondAttribute="trailing" constant="1" id="VJo-21-bRj"/>
+                            <constraint firstItem="9gW-Uh-8hk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zso-0H-8SC"/>
+                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="top" secondItem="9gW-Uh-8hk" secondAttribute="bottom" constant="16" id="a5t-Xs-fuI"/>
+                            <constraint firstItem="9gW-Uh-8hk" firstAttribute="top" secondItem="z24-F1-mZY" secondAttribute="top" id="kAa-1n-H6K"/>
+                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u4V-0w-xN6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Карта" id="n7O-4V-gdh">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="NTQ-SV-Xrq">
+                        <barButtonItem key="leftBarButtonItem" width="4" style="done" id="NTQ-SV-Xrq">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0w3-iv-3fa">
-                                <rect key="frame" x="20" y="5" width="130" height="34.5"/>
+                                <rect key="frame" x="20" y="5" width="102.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Отслеживать"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New route"/>
                                 <connections>
                                     <action selector="updateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGn-Hw-RbV"/>
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" id="XCv-wf-bNI">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1u7-rs-cOA">
-                                <rect key="frame" x="300.5" y="5" width="93.5" height="34.5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="LrG-m0-eXv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="o4y-7O-QUo">
+                                <rect key="frame" x="344" y="5" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Текущее"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Текущее"/>
+                                <state key="normal" image="button_my_location.png"/>
+                                <buttonConfiguration key="configuration" style="gray" image="paperplane" catalog="system"/>
                                 <connections>
-                                    <action selector="currientLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QkZ-G6-ppO"/>
+                                    <action selector="currientLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIM-xY-X4o"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -81,6 +107,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button_my_location.png" width="46" height="46"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
