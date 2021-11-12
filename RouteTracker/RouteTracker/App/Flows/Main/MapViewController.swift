@@ -25,6 +25,9 @@ class MapViewController: UIViewController {
     var routePath: GMSMutablePath?
     var routeSave: Route?
     
+    /// Навигация по координаторам
+    var usselesExampleVariable = ""
+    
     // MARK: - Outlets
 
     @IBOutlet weak var mapView: GMSMapView!

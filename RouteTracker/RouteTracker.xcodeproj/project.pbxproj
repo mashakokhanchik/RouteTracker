@@ -21,6 +21,17 @@
 		E14756302730116300109D0C /* RouteTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147562F2730116300109D0C /* RouteTrackerUITests.swift */; };
 		E14756322730116300109D0C /* RouteTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14756312730116300109D0C /* RouteTrackerUITestsLaunchTests.swift */; };
 		E15F47CD27367C3A008837A6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F47CC27367C3A008837A6 /* Route.swift */; };
+		E18907AB273D1B2E00EDB435 /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */; };
+		E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18907AC273D1BC200EDB435 /* SingUpViewController.swift */; };
+		E18907B0273D234900EDB435 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18907AF273D234900EDB435 /* StoryboardIdentifiable.swift */; };
+		E19B9507273A708500B2EB67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9506273A708500B2EB67 /* User.swift */; };
+		E19B950B273A789900B2EB67 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19B950A273A789900B2EB67 /* Auth.storyboard */; };
+		E19B950D273A913F00B2EB67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B950C273A913F00B2EB67 /* LoginViewController.swift */; };
+		E19B950F273AA37200B2EB67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B950E273AA37200B2EB67 /* MainViewController.swift */; };
+		E19B9511273AA5E600B2EB67 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9510273AA5E600B2EB67 /* BaseCoordinator.swift */; };
+		E19B9513273AA93600B2EB67 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */; };
+		E19B9515273AAA5000B2EB67 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */; };
+		E19B9517273AAA7700B2EB67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +76,17 @@
 		E147562F2730116300109D0C /* RouteTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTrackerUITests.swift; sourceTree = "<group>"; };
 		E14756312730116300109D0C /* RouteTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E15F47CC27367C3A008837A6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
+		E18907AC273D1BC200EDB435 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		E18907AF273D234900EDB435 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		E19B9506273A708500B2EB67 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E19B950A273A789900B2EB67 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		E19B950C273A913F00B2EB67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E19B950E273AA37200B2EB67 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E19B9510273AA5E600B2EB67 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E15F47CC27367C3A008837A6 /* Route.swift */,
+				E19B9506273A708500B2EB67 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -143,8 +166,10 @@
 		E1197B75273533C000B2C02A /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				E14756122730116100109D0C /* MapViewController.swift */,
-				E14756142730116100109D0C /* Main.storyboard */,
+				E19B9510273AA5E600B2EB67 /* BaseCoordinator.swift */,
+				E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */,
+				E19B9509273A787600B2EB67 /* Auth */,
+				E19B9508273A786600B2EB67 /* Main */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -152,6 +177,7 @@
 		E1197B76273533E900B2C02A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E18907AE273D22B100EDB435 /* Helper */,
 				E1197B792735521E00B2C02A /* Service */,
 			);
 			path = Core;
@@ -230,6 +256,37 @@
 				E14756312730116300109D0C /* RouteTrackerUITestsLaunchTests.swift */,
 			);
 			path = RouteTrackerUITests;
+			sourceTree = "<group>";
+		};
+		E18907AE273D22B100EDB435 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E18907AF273D234900EDB435 /* StoryboardIdentifiable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E19B9508273A786600B2EB67 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E14756142730116100109D0C /* Main.storyboard */,
+				E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */,
+				E19B950E273AA37200B2EB67 /* MainViewController.swift */,
+				E14756122730116100109D0C /* MapViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E19B9509273A787600B2EB67 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E19B950A273A789900B2EB67 /* Auth.storyboard */,
+				E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */,
+				E19B950C273A913F00B2EB67 /* LoginViewController.swift */,
+				E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */,
+				E18907AC273D1BC200EDB435 /* SingUpViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		ED1E07247C8738C935EAF3FE /* Pods */ = {
@@ -356,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19B950B273A789900B2EB67 /* Auth.storyboard in Resources */,
 				E147561B2730116200109D0C /* LaunchScreen.storyboard in Resources */,
 				E14756182730116200109D0C /* Assets.xcassets in Resources */,
 				E14756162730116100109D0C /* Main.storyboard in Resources */,
@@ -520,11 +578,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19B950D273A913F00B2EB67 /* LoginViewController.swift in Sources */,
+				E19B9517273AAA7700B2EB67 /* MainCoordinator.swift in Sources */,
+				E19B9511273AA5E600B2EB67 /* BaseCoordinator.swift in Sources */,
 				E14756132730116100109D0C /* MapViewController.swift in Sources */,
 				E147560F2730116100109D0C /* AppDelegate.swift in Sources */,
+				E19B9507273A708500B2EB67 /* User.swift in Sources */,
+				E19B9513273AA93600B2EB67 /* ApplicationCoordinator.swift in Sources */,
+				E19B9515273AAA5000B2EB67 /* AuthCoordinator.swift in Sources */,
+				E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */,
+				E18907AB273D1B2E00EDB435 /* RecoveryPasswordViewController.swift in Sources */,
 				E14756112730116100109D0C /* SceneDelegate.swift in Sources */,
 				E15F47CD27367C3A008837A6 /* Route.swift in Sources */,
 				E1197B7B2735527900B2C02A /* RealmService.swift in Sources */,
+				E19B950F273AA37200B2EB67 /* MainViewController.swift in Sources */,
+				E18907B0273D234900EDB435 /* StoryboardIdentifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

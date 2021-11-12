@@ -27,6 +27,10 @@ class RealmService {
         return realm?.objects(type)
     }
     
+    func get<T: Object, K: Equatable>(_ type: T.Type, with primaryKey: K) -> T? {
+        return realm?.object(ofType: type, forPrimaryKey: primaryKey)
+    }
+    
     func save<T: Object>(_ objects: [T]) {
         do {
             try realm?.write {

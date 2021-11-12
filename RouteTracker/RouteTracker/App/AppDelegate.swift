@@ -7,15 +7,18 @@
 
 import UIKit
 import GoogleMaps
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         /// Настройка ключа GoogleMaps
         GMSServices.provideAPIKey("AIzaSyALLRQ-0dC6d62DfXYBuLHI-PvVSWcFE-A")
+        /// Настройка Realm
+        let realmConfig = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = realmConfig
+        print(realmConfig.fileURL ?? "")
         return true
     }
 
