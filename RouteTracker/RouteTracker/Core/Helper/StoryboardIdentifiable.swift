@@ -7,7 +7,7 @@
 
 import UIKit
 
-// Protocol for objects with an identifier in the storyboard
+// MARK: - Protocol for objects with an identifier in the storyboard
 
 protocol StoryboardIdentifiable {
     

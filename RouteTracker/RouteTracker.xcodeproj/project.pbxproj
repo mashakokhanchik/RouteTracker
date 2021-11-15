@@ -32,6 +32,7 @@
 		E19B9513273AA93600B2EB67 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */; };
 		E19B9515273AAA5000B2EB67 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */; };
 		E19B9517273AAA7700B2EB67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */; };
+		E1E69EB727424E7200EB7C64 /* CurtainDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E69EB627424E7200EB7C64 /* CurtainDisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		E1E69EB627424E7200EB7C64 /* CurtainDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			children = (
 				E19B950A273A789900B2EB67 /* Auth.storyboard */,
 				E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */,
+				E1E69EB627424E7200EB7C64 /* CurtainDisplayView.swift */,
 				E19B950C273A913F00B2EB67 /* LoginViewController.swift */,
 				E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */,
 				E18907AC273D1BC200EDB435 /* SingUpViewController.swift */,
@@ -589,6 +592,7 @@
 				E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */,
 				E18907AB273D1B2E00EDB435 /* RecoveryPasswordViewController.swift in Sources */,
 				E14756112730116100109D0C /* SceneDelegate.swift in Sources */,
+				E1E69EB727424E7200EB7C64 /* CurtainDisplayView.swift in Sources */,
 				E15F47CD27367C3A008837A6 /* Route.swift in Sources */,
 				E1197B7B2735527900B2C02A /* RealmService.swift in Sources */,
 				E19B950F273AA37200B2EB67 /* MainViewController.swift in Sources */,
