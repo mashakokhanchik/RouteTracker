@@ -8,7 +8,7 @@
 import UIKit
 
 class RecoveryPasswordViewController: UIViewController {
-    
+
     // MARK: - Properties
     
     lazy var curtainDisplayView: CurtainDisplayView = CurtainDisplayView()
@@ -80,6 +80,7 @@ class RecoveryPasswordViewController: UIViewController {
         }
     }
     
+
     // MARK: - Actions
     
     @IBAction func recovery(_ sender: Any) {
