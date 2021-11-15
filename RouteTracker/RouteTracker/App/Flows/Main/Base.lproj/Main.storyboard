@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="XQW-Ll-IFu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="0t2-TC-gXJ" customClass="MainViewController" customModule="RouteTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WbB-9Q-waE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEY-EU-xUq">
+                                <rect key="frame" x="161" y="114" width="92" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing In"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Show map">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showMap:" destination="0t2-TC-gXJ" eventType="touchUpInside" id="oQ9-0z-Eha"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-nh-zyh">
+                                <rect key="frame" x="167" y="165" width="80" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing In"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sing Out">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="singOut:" destination="0t2-TC-gXJ" eventType="touchUpInside" id="h3n-N7-oEa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0i3-pt-c0p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rX8-nh-zyh" firstAttribute="centerX" secondItem="0i3-pt-c0p" secondAttribute="centerX" id="5f4-vg-ETG"/>
+                            <constraint firstItem="rX8-nh-zyh" firstAttribute="top" secondItem="oEY-EU-xUq" secondAttribute="bottom" constant="20" id="DFz-Tp-VQN"/>
+                            <constraint firstItem="oEY-EU-xUq" firstAttribute="centerX" secondItem="0i3-pt-c0p" secondAttribute="centerX" id="gGw-vv-su5"/>
+                            <constraint firstItem="oEY-EU-xUq" firstAttribute="top" secondItem="0i3-pt-c0p" secondAttribute="top" constant="70" id="sF6-bx-TXU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVI-ZO-RTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714.49275362318849" y="103.79464285714285"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="RouteTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkV-Bd-cl1" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gW-Uh-8hk">
+                                <rect key="frame" x="8" y="90" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="gV8-Zu-TIk"/>
+                                    <constraint firstAttribute="height" constant="30" id="x1O-iV-y1L"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="End route">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="stopLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cr6-UY-b2P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z24-F1-mZY">
+                                <rect key="frame" x="286" y="90" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9jr-xU-q7t"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="FU5-w5-JQ9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Previous route">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loadLastLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aoq-bo-g24"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quw-X8-ZiD">
+                                <rect key="frame" x="8" y="52" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="nfi-4n-Y5v"/>
+                                    <constraint firstAttribute="height" constant="30" id="wtl-Rr-VVq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="New route">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hta-wB-EAE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzk-lq-b1R">
+                                <rect key="frame" x="356" y="52" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WTq-Bl-c1W"/>
+                                    <constraint firstAttribute="width" constant="50" id="xQm-mY-vfu"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="button_my_location.png"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="">
+                                    <imageReference key="image" image="paperplane" catalog="system" renderingMode="original"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="currientLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlf-0f-AmU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z24-F1-mZY" firstAttribute="leading" secondItem="9gW-Uh-8hk" secondAttribute="trailing" constant="158" id="0f2-Uk-0o5"/>
+                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8cf-61-Pd7"/>
+                            <constraint firstItem="9gW-Uh-8hk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8nD-Q4-qRn"/>
+                            <constraint firstItem="Quw-X8-ZiD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="FE3-Fo-bmp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LkV-Bd-cl1" secondAttribute="trailing" id="GXU-hc-Tb2"/>
+                            <constraint firstItem="LkV-Bd-cl1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nf3-Yw-uZK"/>
+                            <constraint firstItem="rzk-lq-b1R" firstAttribute="leading" secondItem="Quw-X8-ZiD" secondAttribute="trailing" constant="228" id="Pdu-iw-F47"/>
+                            <constraint firstAttribute="bottom" secondItem="LkV-Bd-cl1" secondAttribute="bottom" id="RPm-aR-LZ1"/>
+                            <constraint firstItem="rzk-lq-b1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="RTP-fx-IZ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rzk-lq-b1R" secondAttribute="trailing" constant="8" id="WzH-st-LFE"/>
+                            <constraint firstItem="z24-F1-mZY" firstAttribute="top" secondItem="rzk-lq-b1R" secondAttribute="bottom" constant="8" id="aIH-mk-ACc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z24-F1-mZY" secondAttribute="trailing" constant="8" id="gDh-Xs-Xd8"/>
+                            <constraint firstItem="Quw-X8-ZiD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hKf-iA-tks"/>
+                            <constraint firstItem="9gW-Uh-8hk" firstAttribute="top" secondItem="Quw-X8-ZiD" secondAttribute="bottom" constant="8" id="rci-J0-15C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="n7O-4V-gdh"/>
+                    <connections>
+                        <outlet property="mapView" destination="LkV-Bd-cl1" id="27d-pM-iCD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_my_location.png" width="46" height="46"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
