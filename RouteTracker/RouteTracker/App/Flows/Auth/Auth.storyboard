@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="RouteTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EXV-Qk-IzK">
+                                <rect key="frame" x="20" y="114" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeq-2S-cHS">
+                                <rect key="frame" x="20" y="168" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZr-p5-oZA">
+                                <rect key="frame" x="173" y="272" width="68" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing In"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sing In">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="singIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4zy-gk-zlZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-Kg-POK">
+                                <rect key="frame" x="132" y="323" width="150" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Recovery password"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Recovery password">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recovery:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="z4d-cr-2y4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvw-1Z-dG0">
+                                <rect key="frame" x="169.5" y="374" width="75" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing Up"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sing Up">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="singUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H7l-1d-7W7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hzf-Kg-POK" firstAttribute="top" secondItem="yZr-p5-oZA" secondAttribute="bottom" constant="20" id="CjM-58-AwP"/>
+                            <constraint firstItem="Cvw-1Z-dG0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KU2-2b-GU1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aeq-2S-cHS" secondAttribute="trailing" constant="20" id="SWX-ET-hb9"/>
+                            <constraint firstItem="EXV-Qk-IzK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="70" id="Ynn-1a-Xng"/>
+                            <constraint firstItem="aeq-2S-cHS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="eoG-Un-hvU"/>
+                            <constraint firstItem="aeq-2S-cHS" firstAttribute="top" secondItem="EXV-Qk-IzK" secondAttribute="bottom" constant="20" id="fBi-X8-zXu"/>
+                            <constraint firstItem="yZr-p5-oZA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hER-yK-DFv"/>
+                            <constraint firstItem="EXV-Qk-IzK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="oUv-fd-u3G"/>
+                            <constraint firstItem="Hzf-Kg-POK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qYN-a0-F6Y"/>
+                            <constraint firstItem="yZr-p5-oZA" firstAttribute="top" secondItem="aeq-2S-cHS" secondAttribute="bottom" constant="70" id="rcc-MJ-Ur8"/>
+                            <constraint firstItem="Cvw-1Z-dG0" firstAttribute="top" secondItem="Hzf-Kg-POK" secondAttribute="bottom" constant="20" id="tth-zD-2YH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EXV-Qk-IzK" secondAttribute="trailing" constant="20" id="v3g-UP-nah"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="EXV-Qk-IzK" id="e9a-BS-0gn"/>
+                        <outlet property="passwordTextField" destination="aeq-2S-cHS" id="FGi-7J-k4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="83.705357142857139"/>
+        </scene>
+        <!--Recovery Password View Controller-->
+        <scene sceneID="jgp-Td-dOk">
+            <objects>
+                <viewController storyboardIdentifier="RecoveryPasswordViewController" id="ZIm-CH-ueh" customClass="RecoveryPasswordViewController" customModule="RouteTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kph-gz-Zup">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XhJ-pS-loY">
+                                <rect key="frame" x="20" y="114" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6N2-fW-Iss">
+                                <rect key="frame" x="132" y="258" width="150" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Recovery password"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Recovery password">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recovery:" destination="ZIm-CH-ueh" eventType="touchUpInside" id="Hte-1X-7l3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1dg-Wd-MXt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6N2-fW-Iss" firstAttribute="top" secondItem="XhJ-pS-loY" secondAttribute="bottom" constant="110" id="M6y-am-Dym"/>
+                            <constraint firstItem="1dg-Wd-MXt" firstAttribute="trailing" secondItem="XhJ-pS-loY" secondAttribute="trailing" constant="20" id="Tze-SK-jIm"/>
+                            <constraint firstItem="XhJ-pS-loY" firstAttribute="top" secondItem="1dg-Wd-MXt" secondAttribute="top" constant="70" id="VsB-Su-5NZ"/>
+                            <constraint firstItem="XhJ-pS-loY" firstAttribute="leading" secondItem="1dg-Wd-MXt" secondAttribute="leading" constant="20" id="dXD-ki-dfL"/>
+                            <constraint firstItem="6N2-fW-Iss" firstAttribute="centerX" secondItem="1dg-Wd-MXt" secondAttribute="centerX" id="zsk-0n-6kr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="XhJ-pS-loY" id="dcb-Q9-Aww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxn-bP-rrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="84"/>
+        </scene>
+        <!--Sing Up View Controller-->
+        <scene sceneID="m9c-oN-ssp">
+            <objects>
+                <viewController storyboardIdentifier="SingUpViewController" id="ggw-rS-8Jr" customClass="SingUpViewController" customModule="RouteTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pCN-Dm-jKR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFV-Zr-RSh">
+                                <rect key="frame" x="20" y="114" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bae-4B-oex">
+                                <rect key="frame" x="20" y="168" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="In9-lB-P9b">
+                                <rect key="frame" x="169.5" y="272" width="75" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing In"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sing Up">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="singUp:" destination="ggw-rS-8Jr" eventType="touchUpInside" id="VJt-1b-L9Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-RY-L6z">
+                                <rect key="frame" x="173.5" y="323" width="67.5" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing Up"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Go out">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goOut:" destination="ggw-rS-8Jr" eventType="touchUpInside" id="nCR-ml-Ae5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lp5-dT-KHH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bae-4B-oex" firstAttribute="top" secondItem="jFV-Zr-RSh" secondAttribute="bottom" constant="20" id="0w1-LY-kR2"/>
+                            <constraint firstItem="jFV-Zr-RSh" firstAttribute="top" secondItem="lp5-dT-KHH" secondAttribute="top" constant="70" id="5MH-tl-bk4"/>
+                            <constraint firstItem="lp5-dT-KHH" firstAttribute="trailing" secondItem="jFV-Zr-RSh" secondAttribute="trailing" constant="20" id="AL3-je-6VQ"/>
+                            <constraint firstItem="In9-lB-P9b" firstAttribute="centerX" secondItem="lp5-dT-KHH" secondAttribute="centerX" id="DQd-qs-voo"/>
+                            <constraint firstItem="jFV-Zr-RSh" firstAttribute="leading" secondItem="lp5-dT-KHH" secondAttribute="leading" constant="20" id="MfO-Sx-Noq"/>
+                            <constraint firstItem="bae-4B-oex" firstAttribute="leading" secondItem="lp5-dT-KHH" secondAttribute="leading" constant="20" id="NDv-rH-3dD"/>
+                            <constraint firstItem="In9-lB-P9b" firstAttribute="top" secondItem="bae-4B-oex" secondAttribute="bottom" constant="70" id="PhH-yK-AJv"/>
+                            <constraint firstItem="rqa-RY-L6z" firstAttribute="centerX" secondItem="lp5-dT-KHH" secondAttribute="centerX" id="keO-I6-2BV"/>
+                            <constraint firstItem="lp5-dT-KHH" firstAttribute="trailing" secondItem="bae-4B-oex" secondAttribute="trailing" constant="20" id="osS-Dn-axn"/>
+                            <constraint firstItem="rqa-RY-L6z" firstAttribute="top" secondItem="In9-lB-P9b" secondAttribute="bottom" constant="20" id="uko-7a-D2Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="jFV-Zr-RSh" id="ZMB-Ni-8Ql"/>
+                        <outlet property="passwordTextFielf" destination="bae-4B-oex" id="0pd-I0-L8E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwC-j4-LIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

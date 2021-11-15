@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import GoogleMaps
+import RealmSwift
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        /// Настройка ключа GoogleMaps
+        GMSServices.provideAPIKey("AIzaSyALLRQ-0dC6d62DfXYBuLHI-PvVSWcFE-A")
+        /// Настройка Realm
+        let realmConfig = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = realmConfig
+        print(realmConfig.fileURL ?? "")
         return true
     }
 
