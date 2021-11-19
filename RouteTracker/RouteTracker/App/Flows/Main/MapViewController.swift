@@ -7,7 +7,6 @@
 
 import UIKit
 import GoogleMaps
-import CoreLocation
 
 class MapViewController: UIViewController {
     
@@ -15,7 +14,7 @@ class MapViewController: UIViewController {
     
     /// Координаты центра Москвы
     let coordinate = CLLocationCoordinate2D(latitude: 55.753215, longitude: 37.622504)
-    var locationManager: CLLocationManager?
+    let locationManager = LocationManager.instance
     
     /// Работа в фоне
     var baskgroundTask: UIBackgroundTaskIdentifier?
@@ -59,12 +58,16 @@ class MapViewController: UIViewController {
     }
     
     func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.allowsBackgroundLocationUpdates = true /// Работа геолокации в фоне
-        locationManager?.pausesLocationUpdatesAutomatically = false
-        locationManager?.startMonitoringSignificantLocationChanges()
-        locationManager?.requestWhenInUseAuthorization()
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                self?.routePath?.add(location.coordinate)
+                self?.route?.path = self?.routePath
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+                self?.mapView.animate(to: position)
+            }.dispose()
     }
     func addMarker() {
         let marker = GMSMarker(position: coordinate)
@@ -83,7 +86,7 @@ class MapViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func currientLocation(_ sender: Any) {
-        locationManager?.requestLocation()
+        locationManager.requestLocation()
     }
     
     @IBAction func updateLocation(_ sender: Any) {
@@ -94,13 +97,13 @@ class MapViewController: UIViewController {
         
         routeSave = Route()
         
-        locationManager?.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
     }
     
     @IBAction func stopLocation(_ sender: Any) {
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         saveRoute()
         routeSave = nil
         
@@ -110,7 +113,7 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func loadLastLocation(_ sender: Any) {
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         routeSave = nil
         
         let getLocation = RealmService.shared.get(Route.self)
@@ -141,23 +144,4 @@ extension MapViewController: GMSMapViewDelegate {
         print(coordinate)
     }
 
-}
-
-// MARK: - CLLocation Manager Delegate
-
-extension MapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        routePath?.add(location.coordinate)
-        route?.path = routePath
-        routeSave?.addPosition(with: location.coordinate)
-        let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
-        mapView.animate(to: position)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    
 }

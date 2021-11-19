@@ -91,6 +91,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="EXV-Qk-IzK" id="e9a-BS-0gn"/>
                         <outlet property="passwordTextField" destination="aeq-2S-cHS" id="FGi-7J-k4M"/>
+                        <outlet property="singInButton" destination="yZr-p5-oZA" id="Tqr-21-4Q4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

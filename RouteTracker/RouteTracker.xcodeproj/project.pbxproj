@@ -32,10 +32,11 @@
 		E19B9513273AA93600B2EB67 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */; };
 		E19B9515273AAA5000B2EB67 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */; };
 		E19B9517273AAA7700B2EB67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */; };
-
+		E1CE89C12743D2090046EC37 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CE89C02743D2090046EC37 /* RxCocoa.framework */; };
+		E1CE89C52743D2100046EC37 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CE89C42743D2100046EC37 /* RxRelay.framework */; };
+		E1CE89C82743D2180046EC37 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CE89C72743D2180046EC37 /* RxSwift.framework */; };
+		E1CE89CC2743D8C10046EC37 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE89CB2743D8C10046EC37 /* LocationManager.swift */; };
 		E1E69EB727424E7200EB7C64 /* CurtainDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E69EB627424E7200EB7C64 /* CurtainDisplayView.swift */; };
-
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,9 +92,11 @@
 		E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-
+		E1CE89C02743D2090046EC37 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CE89C42743D2100046EC37 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CE89C72743D2180046EC37 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CE89CB2743D8C10046EC37 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E1E69EB627424E7200EB7C64 /* CurtainDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDisplayView.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CE89C82743D2180046EC37 /* RxSwift.framework in Frameworks */,
+				E1CE89C12743D2090046EC37 /* RxCocoa.framework in Frameworks */,
 				6D8969D044094213D181B9EC /* Pods_RouteTracker.framework in Frameworks */,
+				E1CE89C52743D2100046EC37 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +133,9 @@
 		1A722983FB3E7E6819F676B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1CE89C72743D2180046EC37 /* RxSwift.framework */,
+				E1CE89C42743D2100046EC37 /* RxRelay.framework */,
+				E1CE89C02743D2090046EC37 /* RxCocoa.framework */,
 				7E26AFA30FB041C73A634887 /* Pods_RouteTracker.framework */,
 				76951A3757B463375E0D92D6 /* Pods_RouteTracker_RouteTrackerUITests.framework */,
 				B40B14ABD9EA2F19D97D8A2B /* Pods_RouteTrackerTests.framework */,
@@ -150,6 +159,7 @@
 		E1197B722735336E00B2C02A /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E1CE89CA2743D8970046EC37 /* Network */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -289,14 +299,20 @@
 			children = (
 				E19B950A273A789900B2EB67 /* Auth.storyboard */,
 				E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */,
-
 				E1E69EB627424E7200EB7C64 /* CurtainDisplayView.swift */,
-
 				E19B950C273A913F00B2EB67 /* LoginViewController.swift */,
 				E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */,
 				E18907AC273D1BC200EDB435 /* SingUpViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		E1CE89CA2743D8970046EC37 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E1CE89CB2743D8C10046EC37 /* LocationManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		ED1E07247C8738C935EAF3FE /* Pods */ = {
@@ -589,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19B950D273A913F00B2EB67 /* LoginViewController.swift in Sources */,
+				E1CE89CC2743D8C10046EC37 /* LocationManager.swift in Sources */,
 				E19B9517273AAA7700B2EB67 /* MainCoordinator.swift in Sources */,
 				E19B9511273AA5E600B2EB67 /* BaseCoordinator.swift in Sources */,
 				E14756132730116100109D0C /* MapViewController.swift in Sources */,
@@ -599,9 +616,7 @@
 				E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */,
 				E18907AB273D1B2E00EDB435 /* RecoveryPasswordViewController.swift in Sources */,
 				E14756112730116100109D0C /* SceneDelegate.swift in Sources */,
-
 				E1E69EB727424E7200EB7C64 /* CurtainDisplayView.swift in Sources */,
-
 				E15F47CD27367C3A008837A6 /* Route.swift in Sources */,
 				E1197B7B2735527900B2C02A /* RealmService.swift in Sources */,
 				E19B950F273AA37200B2EB67 /* MainViewController.swift in Sources */,
