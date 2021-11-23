@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class LoginViewController: UIViewController {
     
@@ -32,6 +34,8 @@ final class LoginViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var singInButton: UIButton!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -54,7 +58,7 @@ final class LoginViewController: UIViewController {
         addObserver()
     }
     
-    private override func addObserver() {
+    private func addObserver() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appMovedToBackground),
                                                name: UIApplication.willResignActiveNotification,
@@ -78,6 +82,20 @@ final class LoginViewController: UIViewController {
             self.curtainDisplayView.frame.origin.y -= self.curtainDisplayView.frame.size.height
         }
         passwordTextField.text = ""
+    }
+    
+    // MARK: - Reactive setup for SingIn button
+    
+    func configureSingInBindings() {
+        Observable
+            .combineLatest(loginTextField.rx.text,
+                           passwordTextField.rx.text)
+            .map { login, password in
+                return !(login ?? "").isEmpty && (password ?? "").count >= 6
+            }
+            .bind { [weak singInButton] inputFilled in
+                singInButton?.isEnabled = inputFilled
+            }.dispose()
     }
     
     // MARK: - Actions

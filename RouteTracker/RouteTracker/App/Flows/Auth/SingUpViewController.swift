@@ -49,7 +49,7 @@ class SingUpViewController: UIViewController {
         addObserver()
     }
     
-    private override func addObserver() {
+    private func addObserver() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appMovedToBackground),
                                                name: UIApplication.willResignActiveNotification,
