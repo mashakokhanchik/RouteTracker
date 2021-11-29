@@ -27,6 +27,10 @@ class MapViewController: UIViewController {
     /// Навигация по координаторам
     var usselesExampleVariable = ""
     
+    /// Маркер
+    var marker: GMSMarker?
+    var avatarImage: UIImage!
+    
     // MARK: - Outlets
 
     @IBOutlet weak var mapView: GMSMapView!
@@ -44,7 +48,6 @@ class MapViewController: UIViewController {
         
         configureMap()
         configureLocationManager()
-        addMarker()
     }
     
     // MARK: - Methods
@@ -55,6 +58,15 @@ class MapViewController: UIViewController {
         /// Установка камеры для карты
         mapView.camera = camera
         mapView.delegate = self
+        /// Установка маркера
+        marker = GMSMarker(position: coordinate)
+        let markerView = UIImageView(image: avatarImage)
+        markerView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        markerView.layer.cornerRadius = 16
+        markerView.layer.masksToBounds = true
+        markerView.tintColor = .red
+        marker?.iconView = markerView
+        marker?.map = mapView
     }
     
     func configureLocationManager() {
@@ -65,15 +77,10 @@ class MapViewController: UIViewController {
                 guard let location = location else { return }
                 self?.routePath?.add(location.coordinate)
                 self?.route?.path = self?.routePath
+                self?.marker?.position = location.coordinate
                 let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
                 self?.mapView.animate(to: position)
             }.dispose()
-    }
-    func addMarker() {
-        let marker = GMSMarker(position: coordinate)
-        marker.icon = GMSMarker.markerImage(with: .red)
-        marker.map = mapView
-        //self.marker = marker
     }
     
     func saveRoute() {

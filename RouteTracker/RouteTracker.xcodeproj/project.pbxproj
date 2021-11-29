@@ -24,6 +24,7 @@
 		E18907AB273D1B2E00EDB435 /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */; };
 		E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18907AC273D1BC200EDB435 /* SingUpViewController.swift */; };
 		E18907B0273D234900EDB435 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18907AF273D234900EDB435 /* StoryboardIdentifiable.swift */; };
+		E18939DC2754D98200A36C65 /* SelfyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18939DB2754D98200A36C65 /* SelfyViewController.swift */; };
 		E19B9507273A708500B2EB67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9506273A708500B2EB67 /* User.swift */; };
 		E19B950B273A789900B2EB67 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19B950A273A789900B2EB67 /* Auth.storyboard */; };
 		E19B950D273A913F00B2EB67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B950C273A913F00B2EB67 /* LoginViewController.swift */; };
@@ -84,6 +85,7 @@
 		E18907AA273D1B2E00EDB435 /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
 		E18907AC273D1BC200EDB435 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		E18907AF273D234900EDB435 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		E18939DB2754D98200A36C65 /* SelfyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfyViewController.swift; sourceTree = "<group>"; };
 		E19B9506273A708500B2EB67 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E19B950A273A789900B2EB67 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		E19B950C273A913F00B2EB67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */,
 				E19B950E273AA37200B2EB67 /* MainViewController.swift */,
 				E14756122730116100109D0C /* MapViewController.swift */,
+				E18939DB2754D98200A36C65 /* SelfyViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */,
 				E18907AB273D1B2E00EDB435 /* RecoveryPasswordViewController.swift in Sources */,
 				E14756112730116100109D0C /* SceneDelegate.swift in Sources */,
+				E18939DC2754D98200A36C65 /* SelfyViewController.swift in Sources */,
 				E1E69EB727424E7200EB7C64 /* CurtainDisplayView.swift in Sources */,
 				E15F47CD27367C3A008837A6 /* Route.swift in Sources */,
 				E1197B7B2735527900B2C02A /* RealmService.swift in Sources */,

@@ -45,12 +45,28 @@
                                     <action selector="singOut:" destination="0t2-TC-gXJ" eventType="touchUpInside" id="h3n-N7-oEa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pg-Vc-epc">
+                                <rect key="frame" x="155" y="216" width="104" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sing In"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Take a selfie">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="takePicture:" destination="0t2-TC-gXJ" eventType="touchUpInside" id="mID-El-8Zv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0i3-pt-c0p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rX8-nh-zyh" firstAttribute="centerX" secondItem="0i3-pt-c0p" secondAttribute="centerX" id="5f4-vg-ETG"/>
+                            <constraint firstItem="0pg-Vc-epc" firstAttribute="top" secondItem="rX8-nh-zyh" secondAttribute="bottom" constant="20" id="8Jw-9w-nBR"/>
                             <constraint firstItem="rX8-nh-zyh" firstAttribute="top" secondItem="oEY-EU-xUq" secondAttribute="bottom" constant="20" id="DFz-Tp-VQN"/>
+                            <constraint firstItem="0pg-Vc-epc" firstAttribute="centerX" secondItem="0i3-pt-c0p" secondAttribute="centerX" id="OwP-5R-V3u"/>
                             <constraint firstItem="oEY-EU-xUq" firstAttribute="centerX" secondItem="0i3-pt-c0p" secondAttribute="centerX" id="gGw-vv-su5"/>
                             <constraint firstItem="oEY-EU-xUq" firstAttribute="top" secondItem="0i3-pt-c0p" secondAttribute="top" constant="70" id="sF6-bx-TXU"/>
                         </constraints>
@@ -169,6 +185,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="103.79464285714285"/>
+        </scene>
+        <!--Selfy View Controller-->
+        <scene sceneID="HUU-QY-Rud">
+            <objects>
+                <viewController storyboardIdentifier="SelfyViewController" id="hD8-M8-ixP" customClass="SelfyViewController" customModule="RouteTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ndg-l1-fw3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DU7-DU-lpo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cxw-Yy-oRE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cxw-Yy-oRE" firstAttribute="trailing" secondItem="DU7-DU-lpo" secondAttribute="trailing" id="aUW-5f-Krm"/>
+                            <constraint firstItem="DU7-DU-lpo" firstAttribute="top" secondItem="cxw-Yy-oRE" secondAttribute="top" id="lgw-YG-APn"/>
+                            <constraint firstItem="DU7-DU-lpo" firstAttribute="leading" secondItem="cxw-Yy-oRE" secondAttribute="leading" id="tkt-By-hvq"/>
+                            <constraint firstItem="cxw-Yy-oRE" firstAttribute="bottom" secondItem="DU7-DU-lpo" secondAttribute="bottom" id="yfk-5k-DB4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="DU7-DU-lpo" id="ks3-M1-LGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gc7-HF-uh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="788"/>
         </scene>
     </scenes>
     <resources>

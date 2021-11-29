@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 final class User: Object {
     
@@ -14,17 +15,20 @@ final class User: Object {
     
     @objc dynamic var login: String
     @objc dynamic var password: String
+    @objc dynamic var avatar: UIImage
     
     // MARK: - Inits
     
-    init(login: String, password: String) {
+    init(login: String, password: String, avatar: UIImage) {
         self.login = login
         self.password = password
+        self.avatar = avatar
     }
     
     override init() {
         login = "admin"
         password = "123456"
+        avatar = ""
     }
     
     // MARK: - Methods
