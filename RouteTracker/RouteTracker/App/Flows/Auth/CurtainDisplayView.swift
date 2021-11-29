@@ -41,7 +41,7 @@ class CurtainDisplayView: UIView {
         backgroundColor = .systemYellow
         addSubview(textLabel)
         NSLayoutConstraint.activate([
-            textLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            textLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             textLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }

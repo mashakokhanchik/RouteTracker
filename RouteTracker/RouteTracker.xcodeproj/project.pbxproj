@@ -32,6 +32,7 @@
 		E19B9513273AA93600B2EB67 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */; };
 		E19B9515273AAA5000B2EB67 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */; };
 		E19B9517273AAA7700B2EB67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */; };
+		E1C2D1DC274F836200CDFF49 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2D1DB274F836200CDFF49 /* NotificationCenter.swift */; };
 		E1CE89C12743D2090046EC37 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CE89C02743D2090046EC37 /* RxCocoa.framework */; };
 		E1CE89C52743D2100046EC37 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CE89C42743D2100046EC37 /* RxRelay.framework */; };
 		E1CE89C82743D2180046EC37 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CE89C72743D2180046EC37 /* RxSwift.framework */; };
@@ -92,6 +93,7 @@
 		E19B9512273AA93600B2EB67 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		E19B9514273AAA5000B2EB67 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		E19B9516273AAA7700B2EB67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		E1C2D1DB274F836200CDFF49 /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		E1CE89C02743D2090046EC37 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CE89C42743D2100046EC37 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CE89C72743D2180046EC37 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,8 +196,9 @@
 		E1197B76273533E900B2C02A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E18907AE273D22B100EDB435 /* Helper */,
 				E1197B792735521E00B2C02A /* Service */,
+				E18907AE273D22B100EDB435 /* Helper */,
+				E1C2D1DA274F831300CDFF49 /* Notification */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -305,6 +308,14 @@
 				E18907AC273D1BC200EDB435 /* SingUpViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		E1C2D1DA274F831300CDFF49 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				E1C2D1DB274F836200CDFF49 /* NotificationCenter.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		E1CE89CA2743D8970046EC37 /* Network */ = {
@@ -611,6 +622,7 @@
 				E14756132730116100109D0C /* MapViewController.swift in Sources */,
 				E147560F2730116100109D0C /* AppDelegate.swift in Sources */,
 				E19B9507273A708500B2EB67 /* User.swift in Sources */,
+				E1C2D1DC274F836200CDFF49 /* NotificationCenter.swift in Sources */,
 				E19B9513273AA93600B2EB67 /* ApplicationCoordinator.swift in Sources */,
 				E19B9515273AAA5000B2EB67 /* AuthCoordinator.swift in Sources */,
 				E18907AD273D1BC200EDB435 /* SingUpViewController.swift in Sources */,
