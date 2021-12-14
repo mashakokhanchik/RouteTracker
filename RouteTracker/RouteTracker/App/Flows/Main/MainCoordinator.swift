@@ -30,6 +30,9 @@ final class MainCoordinator: BaseCoordinator {
         controller.onSingOut = { [weak self] in
             self?.onFinishFlow?()
         }
+        controller.onTakePicture = { [weak self] image in
+            self?.showSelfyModule(image: image)
+        }
         let rootController = UINavigationController(rootViewController: controller)
         setAsRoot(rootController)
         self.rootController = rootController
@@ -41,4 +44,12 @@ final class MainCoordinator: BaseCoordinator {
         controller.usselesExampleVariable = usseles
         rootController?.pushViewController(controller, animated: true)
     }
+    
+    private func showSelfyModule(image: UIImage) {
+        let controller = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(SelfyViewController.self)
+        controller.avatarImage = image
+        rootController?.pushViewController(controller, animated: true)
+    }
+    
 }
